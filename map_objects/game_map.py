@@ -1,5 +1,5 @@
 # Python Imports
-from libtcodpy import libtcod
+import libtcodpy as libtcod
 from random import randint
 
 # Package Imports
@@ -99,10 +99,12 @@ class GameMap:
 
             if not any([entity for entity in entities if entity.x == x and entity.y == y]):
                 if randint(0, 100) < 80:
-                    monster = Entity(x, y, '0', libtcod.desaturated_green)
+                    monster = Entity(x, y, '0', libtcod.desaturated_green, 'Orc', blocks=True)
 
                 else:
-                    monster = Entity(x, y, 'T', libtcod.darker_green)
+                    monster = Entity(x, y, 'T', libtcod.darker_green, 'Troll', blocks=True)
+
+                entities.append(monster)
 
     #set whether the tile is blocked or no.  Checks the property of tiles to see if it has the blocked property
     def is_blocked(self, x, y):

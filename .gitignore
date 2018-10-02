@@ -102,3 +102,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+libtcod.dll
+libtcodgui.dll
+libtcodpy/__init__.py
+libtcodpy/cprotos.py
+SDL2.dll
