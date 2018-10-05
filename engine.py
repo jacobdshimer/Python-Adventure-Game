@@ -162,7 +162,7 @@ def main():
                 return True
 
         if fullscreen:
-            libtcod.console_set_fullscreen(not libtcod.console_flush_is_fullscreen())
+            libtcod.console_set_fullscreen(not libtcod.console_is_fullscreen())
 
         for player_turn_result in player_turn_results:
             message = player_turn_result.get('message')
